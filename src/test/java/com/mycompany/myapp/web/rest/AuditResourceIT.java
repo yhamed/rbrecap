@@ -40,7 +40,7 @@ public class AuditResourceIT {
     private static final long SECONDS_PER_DAY = 60 * 60 * 24;
 
     @Autowired
-    private PersistenceAuditEventRepositoryn auditEventRepository;
+    private PersistenceAuditEventRepository auditEventRepository;
 
     @Autowired
     private AuditEventConverter auditEventConverter;
