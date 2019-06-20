@@ -1,0 +1,25 @@
+{
+  "rbRecapApp": {
+    "droit": {
+      "home": {
+        "title": "Droits",
+        "createLabel": "Create a new Droit",
+        "createOrEditLabel": "Create or edit a Droit",
+        "search": "Search for Droit",
+        "notFound": "No Droit found"
+      },
+      "created": "A new Droit is created with identifier {{ param }}",
+      "updated": "A Droit is updated with identifier {{ param }}",
+      "deleted": "A Droit is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Droit {{ id }}?"
+      },
+      "detail": {
+        "title": "Droit"
+      },
+      "name": "Name",
+      "isSwitch": "Is Switch",
+      "userStories": "User Stories"
+    }
+  }
+}

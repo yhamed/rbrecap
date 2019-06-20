@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userStory">
+            <h2><span jhiTranslate="rbRecapApp.userStory.detail.title">User Story</span> {{userStory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="rbRecapApp.userStory.name">Name</span></dt>
+                <dd>
+                    <span>{{userStory.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="rbRecapApp.userStory.description">Description</span></dt>
+                <dd>
+                    <span>{{userStory.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="rbRecapApp.userStory.chiffrage">Chiffrage</span></dt>
+                <dd>
+                    <span>{{userStory.chiffrage}}</span>
+                </dd>
+                <dt><span jhiTranslate="rbRecapApp.userStory.sprint">Sprint</span></dt>
+                <dd>
+                    <div *ngIf="userStory.sprintId">
+                        <a [routerLink]="['/sprint', userStory.sprintId, 'view']">{{userStory.sprintId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-story', userStory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

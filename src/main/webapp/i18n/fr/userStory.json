@@ -1,0 +1,28 @@
+{
+  "rbRecapApp": {
+    "userStory": {
+      "home": {
+        "title": "UserStories",
+        "createLabel": "Créer un nouveau User Story",
+        "createOrEditLabel": "Créer ou éditer un User Story",
+        "search": "Recherche pour User Story",
+        "notFound": "Aucun User Story trouvé"
+      },
+      "created": "Un nouveau User Story a été créé avec l'identifiant {{ param }}",
+      "updated": "Le User Story avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le User Story avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le User Story {{ id }} ?"
+      },
+      "detail": {
+        "title": "User Story"
+      },
+      "name": "Name",
+      "description": "Description",
+      "chiffrage": "Chiffrage",
+      "sprint": "Sprint",
+      "tags": "Tags",
+      "droits": "Droits"
+    }
+  }
+}

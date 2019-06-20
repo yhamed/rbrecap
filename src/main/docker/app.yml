@@ -1,0 +1,27 @@
+version: '2'
+services:
+  rbrecap-app:
+    image: rbrecap
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://rbrecap-mysql:3306/rbrecap?useUnicode=true&characterEncoding=utf8&useSSL=false
+      - JHIPSTER_CACHE_MEMCACHED_SERVERS=rbrecap-memcached:11211
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_DATA_JEST_URI=http://rbrecap-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://rbrecap-elasticsearch:9200
+    ports:
+      - 8080:8080
+  rbrecap-mysql:
+    extends:
+      file: mysql.yml
+      service: rbrecap-mysql
+  rbrecap-memcached:
+    extends:
+      file: memcached.yml
+      service: rbrecap-memcached
+  rbrecap-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: rbrecap-elasticsearch

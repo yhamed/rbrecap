@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "userStory",
+            "otherEntityName": "userStory",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sprint"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "sprintNumber",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20190617193134",
+    "dto": "mapstruct",
+    "searchEngine": "elasticsearch",
+    "service": "serviceImpl",
+    "entityTableName": "sprint",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll"
+}
